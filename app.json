@@ -12,6 +12,11 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "updates": {
+      "fallbackToCacheTimeout": 0,
+      "enabled": true,
+      "url": "https://u.expo.dev/864d4556-52a3-4dc3-9c93-dc8fe4e56ce4"
+    },
     "ios": {
       "supportsTablet": true
     },
@@ -19,7 +24,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.nanieppi.lokeshdemo"
     },
     "web": {
       "bundler": "metro",
@@ -31,6 +37,17 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "864d4556-52a3-4dc3-9c93-dc8fe4e56ce4"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
     }
   }
 }

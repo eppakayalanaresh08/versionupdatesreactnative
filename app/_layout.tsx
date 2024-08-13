@@ -6,6 +6,14 @@ import { useEffect } from 'react';
 import 'react-native-reanimated';
 
 import { useColorScheme } from '@/hooks/useColorScheme';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import About from './about'
+
+import Profile from './profile'
+
+
+const Drawer = createDrawerNavigator();
+
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -27,11 +35,9 @@ export default function RootLayout() {
   }
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-    </ThemeProvider>
+    <Drawer.Navigator>
+    <Drawer.Screen name="about" component={About} />
+    {/* <Drawer.Screen name="profile" component={Profile} /> */}
+  </Drawer.Navigator>
   );
 }
